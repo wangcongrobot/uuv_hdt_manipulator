@@ -1,0 +1,7 @@
+<launch>
+    <!-- Load parameters -->
+    <rosparam file="$(find hdt_gym)/config/hdt_gym.yaml" command="load" />
+
+    
+
+</launch>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="paused" default="false" doc="Starts gazebo in paused mode" />
+  <arg name="gui" default="true" doc="Starts gazebo gui" />
+  
+  <!-- startup simulated world -->
+  <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" default="worlds/empty.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include> -->
+
+  <!-- send table urdf to param server -->
+  <param name="table_description" command="$(find xacro)/xacro --inorder $(find hdt_angler_description)/urdf/table.urdf.xacro" />
+
+  <!-- push table_description and spawn robot in gazebo -->
+  <node name="spawn_table" pkg="gazebo_ros" type="spawn_model" args="-urdf -param table_description -z -99.9 -model table_model" respawn="false" output="screen" />
+
+  <!-- send object urdf to param server -->
+  <param name="object_description" command="$(find xacro)/xacro --inorder $(find hdt_angler_description)/urdf/object.urdf.xacro" />
+
+  <!-- push object_description and spawn robot in gazebo -->
+  <node name="spawn_object" pkg="gazebo_ros" type="spawn_model" args="-urdf -param object_description -x 0.5 -y 0 -z -99. -model object_model" respawn="false" output="screen" />
+
+  <!-- publish the pose of object -->
+  <node name="gazebo_object_pose_pub" pkg="hdt_gazebo" type="gazebo_link_pose.py" output="screen" />
+
+</launch>

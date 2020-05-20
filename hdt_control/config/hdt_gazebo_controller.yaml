@@ -1,0 +1,38 @@
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+
+arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - drive1_joint
+    - drive2_joint
+    - drive3_joint
+    - drive4_joint
+    - drive5_joint
+    - drive6_joint
+
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.05
+      drive1_joint: {trajectory: 0.1, goal: 0.1}
+      drive2_joint: {trajectory: 0.1, goal: 0.1}
+      drive3_joint: {trajectory: 0.1, goal: 0.1}
+      drive4_joint: {trajectory: 0.1, goal: 0.1}
+      drive5_joint: {trajectory: 0.1, goal: 0.1}
+      drive6_joint: {trajectory: 0.1, goal: 0.1}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+  
+joint_group_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints:
+    - drive1_joint
+    - drive2_joint
+    - drive3_joint
+    - drive4_joint
+    - drive5_joint
+    - drive6_joint
+
+

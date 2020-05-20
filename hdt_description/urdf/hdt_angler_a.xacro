@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot name="hdt_arm" xmlns:xacro="http://wiki.ros.org/xacro">
+
+
+    <!-- Gazebo -->
+    <xacro:include filename="$(find hdt_description)/urdf/hdt_angler_a_gazebo.xacro" />
+
+    <!-- motor and transmition -->
+    <xacro:include filename="$(find hdt_description)/urdf/hdt_angler_a_transmission.xacro" />
+
+    <!-- camera sensor -->
+    <xacro:include filename="$(find hdt_description)/urdf/hdt_angler_a_sensor.xacro" />
+
+    <!-- hdt arm -->
+    <xacro:include filename="$(find hdt_description)/urdf/hdt_angler_a_arm.xacro" />
+
+    <!-- Used for fixing robot to Gazebo 'base_link' -->
+    <!-- <link name="world" />
+
+    <joint name="world_joint" type="fixed">
+      <parent link="world" />
+      <child link = "base_link" />
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+    </joint> -->
+
+</robot>

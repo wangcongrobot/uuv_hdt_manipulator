@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: hdt_angler_description
+    relative_path: urdf/hdt_angler_a.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/hdt_arm.srdf
+  CONFIG:
+    author_name: Cong Wang
+    author_email: wangcongrobot@gmail.com
+    generated_timestamp: 1587591638

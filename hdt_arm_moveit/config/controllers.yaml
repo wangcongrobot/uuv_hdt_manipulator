@@ -1,0 +1,19 @@
+controller_manager_ns: controller_manager
+controller_list:
+  - name: hdt_arm/arm_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - drive1_joint
+      - drive2_joint
+      - drive3_joint
+      - drive4_joint
+      - drive5_joint
+      - drive6_joint
+  - name: hdt_arm/hand_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      pincer_joint

@@ -1,0 +1,12 @@
+<launch>
+    <!-- Load joint controller configurations from YAML file to parameter server -->
+    <rosparam file="$(find hdt_control)/config/hdt_control.yaml" command="load" />
+
+    <!-- Load the controllers -->
+    <node name="arm_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/hdt_arm" args="arm_controller hand_controller joint_state_controller"/>
+
+    <!-- convert jont states to TF transforms for rviz, etc -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+        <remap from="/joint_states" to="/hdt_arm/joint_states" />
+    </node>
+</launch>

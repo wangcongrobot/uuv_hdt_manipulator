@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <!-- <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/hdt_arm</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo> -->
+
+<xacro:macro name="hdt_gazebo_macro" params="namespace">
+  <gazebo reference="${namespace}/pedestal_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/drive1_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/drive2_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/humerus_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/elbow_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/drive3_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/drive4_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/wrist_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/drive5_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/drive6_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="${namespace}/pincer_link">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+  
+  <gazebo reference="${namespace}/pincer_link2">
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <!-- <gazebo reference="${namespace}/endpoint_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo> -->
+</xacro:macro>
+  <!-- camera -->
+  <!-- <gazebo reference="camera_link">
+    <sensor name="kinect_camera" type="depth">
+      <update_rate>20</update_rate>
+      <camera>
+        <horizontal_fov>1.047198</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>3</far>
+        </clip>
+      </camera>
+      <plugin name="kinect_controller" filename="libgazebo_ros_openni_kinect.so">
+        <baseline>0.2</baseline>
+        <alwaysOn>true</alwaysOn>
+        <updateRate>1.0</updateRate>
+        <cameraName>kinect_ir</cameraName>
+        <imageTopicName>/kinect/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>/kinect/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>/kinect/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>/kinect/depth/camera_info</depthImageInfoTopicName>
+        <pointCloudTopicName>/kinect/depth/points</pointCloudTopicName>
+        <frameName>camera_link_optical</frameName>
+        <pointCloudCutoff>0.5</pointCloudCutoff>
+        <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+        <distortionK1>0.00000001</distortionK1>
+        <distortionK2>0.00000001</distortionK2>
+        <distortionK3>0.00000001</distortionK3>
+        <distortionT1>0.00000001</distortionT1>
+        <distortionT2>0.00000001</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0</Cx>
+        <Cy>0</Cy>
+        <focalLength>0</focalLength>
+        <hackBaseline>0</hackBaseline>
+      </plugin>
+    </sensor>
+  </gazebo> -->
+
+
+  <!--
+  Parameters for the uuv_underwater_object_plugin that includes the implementation
+  of Fossen's equations of motion for underwater vehicles. This parameters will
+  be loaded by the vehicle where it is installed.
+  -->
+  <xacro:macro name="hdt_hydro_model" params="namespace">
+    <!-- <link name="${namespace}/base_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.</volume>
+      <box>
+        <width>0.</width>
+        <length>0.</length>
+        <height>0.</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+      </link> -->
+
+    <!-- <link name="${namespace}/endpoint_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.0</volume>
+      <box>
+        <width>0.0</width>
+        <length>0.</length>
+        <height>0.</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link> -->
+
+    <!-- <link name="${namespace}/pedestal_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000521</volume>
+      <box>
+        <width>0.101600</width>
+        <length>0.173622</length>
+        <height>0.044800</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="${namespace}/drive1_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000143</volume>
+      <box>
+        <width>0.049990</width>
+        <length>0.055893</length>
+        <height>0.068154</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="${namespace}/drive2_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000143</volume>
+      <box>
+        <width>0.049990</width>
+        <length>0.055893</length>
+        <height>0.068154</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="${namespace}/humerus_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000436</volume>
+      <box>
+        <width>0.042998</width>
+        <length>0.307928</length>
+        <height>0.042998</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link> -->
+
+    <!-- <link name="${namespace}/elbow_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000143</volume>
+      <box>
+        <width>0.049990</width>
+        <length>0.055893</length>
+        <height>0.068154</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="${namespace}/drive3_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000143</volume>
+      <box>
+        <width>0.049990</width>
+        <length>0.055893</length>
+        <height>0.068154</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="${namespace}/drive4_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000262</volume>
+      <box>
+        <width>0.042944</width>
+        <length>0.042944</length>
+        <height>0.206009</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="${namespace}/wrist_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000143</volume>
+      <box>
+        <width>0.049990</width>
+        <length>0.055893</length>
+        <height>0.068154</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="${namespace}/drive5_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000143</volume>
+      <box>
+        <width>0.049990</width>
+        <length>0.055893</length>
+        <height>0.068154</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="${namespace}/drive6_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000779</volume>
+      <box>
+        <width>0.148921</width>
+        <length>0.152392</length>
+        <height>0.103137</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="pincer_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000075</volume>
+      <box>
+        <width>0.043517</width>
+        <length>0.153946</length>
+        <height>0.018000</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="pincer_link2">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.000075</volume>
+      <box>
+        <width>0.043517</width>
+        <length>0.153946</length>
+        <height>0.018000</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link> -->
+  </xacro:macro>
+</robot>

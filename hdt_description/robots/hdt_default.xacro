@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="hdt" xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <!-- hdt arm -->
+  <xacro:include filename="$(find hdt_description)/urdf/hdt_angler_a_arm.xacro" />
+
+  <xacro:macro name="hdt" params="namespace parent *origin">
+    <xacro:hdt_serial_arm namespace="${namespace}"/>
+    <joint name="${namespace}/anchor" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${namespace}/pedestal_link"/>
+      <xacro:insert_block name="origin"/>
+      <!-- <axis xyz="0 1 0"/> -->
+      <!-- <limit effort="0" lower="0" upper="0" velocity="0"/> -->
+    </joint>
+  </xacro:macro>
+</robot>
