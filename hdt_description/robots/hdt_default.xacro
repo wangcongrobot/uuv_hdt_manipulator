@@ -4,8 +4,8 @@
   <!-- hdt arm -->
   <xacro:include filename="$(find hdt_description)/urdf/hdt_angler_a_arm.xacro" />
 
-  <xacro:macro name="hdt" params="namespace parent *origin">
-    <xacro:hdt_serial_arm namespace="${namespace}"/>
+  <xacro:macro name="hdt" params="namespace parent hardware_interface *origin">
+    <xacro:hdt_serial_arm namespace="${namespace}" hardware_interface="${hardware_interface}"/>
     <joint name="${namespace}/anchor" type="fixed">
       <parent link="${parent}"/>
       <child link="${namespace}/pedestal_link"/>

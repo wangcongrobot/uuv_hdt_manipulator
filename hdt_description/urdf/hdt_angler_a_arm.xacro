@@ -10,9 +10,9 @@
     <!-- camera sensor -->
     <xacro:include filename="$(find hdt_description)/urdf/hdt_angler_a_sensor.xacro" />
 
-    <xacro:macro name="hdt_serial_arm" params="namespace">
+    <xacro:macro name="hdt_serial_arm" params="namespace hardware_interface ">
 
-        <xacro:hdt_transmission_macro namespace="${namespace}"/>
+        <xacro:hdt_transmission_macro namespace="${namespace}" hardware_interface="${hardware_interface}" />
         <xacro:hdt_gazebo_macro namespace="${namespace}"/>
         <xacro:hdt_sensor_macro namespace="${namespace}"/>
 

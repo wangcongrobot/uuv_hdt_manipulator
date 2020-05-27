@@ -57,148 +57,172 @@
   <transmission name="/trans1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="/drive1_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor1">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="/trans2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="/drive2_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="/trans3">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="/drive3_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor3">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="/trans4">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="/drive4_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor4">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="/trans5">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="/drive5_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor5">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="/trans6">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="/drive6_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor6">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="/trans7">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="/pincer_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor7">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <transmission name="/trans8">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="/pincer_joint2">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor8">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <gazebo reference="/pedestal_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/drive1_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/drive2_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/humerus_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/elbow_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/drive3_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/drive4_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/wrist_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/drive5_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/drive6_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/pincer_link">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
   <gazebo reference="/pincer_link2">
-    <material>Gazebo/Black</material>
+    <selfCollide>false</selfCollide>
+    <maxContacts>1</maxContacts>
+    <!-- <material>Gazebo/Black</material> -->
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
   </gazebo>
-  <gazebo reference="/endpoint_link">
+  <!-- <gazebo reference="${namespace}/endpoint_link">
     <material>Gazebo/Black</material>
     <mu1>0.61</mu1>
     <mu2>0.61</mu2>
-  </gazebo>
+  </gazebo> -->
   <!-- camera -->
   <joint name="/camera_joint" type="fixed">
     <!-- <axis xyz="0 1 0"/> -->
@@ -237,25 +261,23 @@
   <link name="/camera_link_optical">
       </link>
   <!-- materials -->
-  <!-- <material name="black">
-            <color rgba="${200/255} ${200/255} ${200/255} 1.0"/>
-        </material>
-
-        <material name="grey">
-            <color rgba="${64/255} ${64/255} ${64/255} 1.0"/>
-        </material>
-        
-        <material name="yellow">
-            <color rgba="${240/255} ${224/255} ${64/255} 1.0"/>
-        </material> -->
+  <material name="black1">
+    <color rgba="0.78431372549 0.78431372549 0.78431372549 1.0"/>
+  </material>
+  <material name="grey1">
+    <color rgba="0.250980392157 0.250980392157 0.250980392157 1.0"/>
+  </material>
+  <material name="yellow1">
+    <color rgba="0.941176470588 0.878431372549 0.250980392157 1.0"/>
+  </material>
   <!-- segment 0 -->
-  <link name="/base_link"/>
+  <!-- <link name="${namespace}/base_link"/> -->
   <!-- pedestal -->
-  <joint name="/pedestal_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="/base_link"/>
-    <child link="/pedestal_link"/>
-  </joint>
+  <!-- <joint name="${namespace}/pedestal_joint" type="fixed">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <parent link="${namespace}/base_link"/>
+            <child link="${namespace}/pedestal_link"/>
+        </joint> -->
   <link name="/pedestal_link">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -268,11 +290,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H026994 - A35 M-2 PEDESTAL ASSY - SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -297,11 +319,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -326,11 +348,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="3.14159265359 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -352,11 +374,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024847 - A35 M-2 PROXIMAL TUBE ASSY - SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -378,11 +400,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 3.14159265359 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -408,11 +430,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 1.57079632679 -1.57079632679" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -437,11 +459,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024848 - A35 M-2 DISTAL TUBE ASSY - SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="3.14159265359 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -463,11 +485,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 0 3.14159265359" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -492,11 +514,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -521,11 +543,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H024842 - A35 M-2 PINCER ASSY - SHAREABLE, UNDERWATER.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -551,11 +573,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -584,11 +606,11 @@
       <geometry>
         <mesh filename="package://hdt_angler_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
       </geometry>
-      <!-- <material name="black"/> -->
+      <material name="black1"/>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.11"/>
       <inertia ixx="0.05" ixy="0.01" ixz="0.01" iyy="0.05" iyz="0.01" izz="0.05"/>
     </inertial>
   </link>
@@ -602,7 +624,7 @@
         </link>
   <joint name="/anchor" type="fixed">
     <parent link="world"/>
-    <child link="/base_link"/>
+    <child link="/pedestal_link"/>
     <origin rpy="0 0 0" xyz="0 0 1.5"/>
     <!-- <axis xyz="0 1 0"/> -->
     <!-- <limit effort="0" lower="0" upper="0" velocity="0"/> -->

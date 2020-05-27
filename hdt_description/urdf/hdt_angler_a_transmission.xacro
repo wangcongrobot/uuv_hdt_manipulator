@@ -2,15 +2,15 @@
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
 
   <!-- <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/> -->
-  <!-- <xacro:arg name="transmission_hw_interface" default="hardware_interface/EffortJointInterface"/> -->
-  <xacro:macro name="hdt_transmission_macro" params="namespace">
+  <!-- <xacro:arg name="transmission_hw_interface" default="${hardware_interface}"/> -->
+  <xacro:macro name="hdt_transmission_macro" params="namespace hardware_interface">
     <transmission name="${namespace}/trans1">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${namespace}/drive1_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="motor1">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -18,10 +18,10 @@
     <transmission name="${namespace}/trans2">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${namespace}/drive2_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="motor2">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -29,10 +29,10 @@
     <transmission name="${namespace}/trans3">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${namespace}/drive3_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="motor3">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -40,10 +40,10 @@
     <transmission name="${namespace}/trans4">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${namespace}/drive4_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="motor4">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -51,10 +51,10 @@
     <transmission name="${namespace}/trans5">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${namespace}/drive5_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="motor5">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -62,10 +62,10 @@
     <transmission name="${namespace}/trans6">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${namespace}/drive6_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="motor6">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -73,10 +73,10 @@
     <transmission name="${namespace}/trans7">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${namespace}/pincer_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="motor7">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -84,10 +84,10 @@
     <transmission name="${namespace}/trans8">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${namespace}/pincer_joint2">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
       </joint>
       <actuator name="motor8">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>${hardware_interface}</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
