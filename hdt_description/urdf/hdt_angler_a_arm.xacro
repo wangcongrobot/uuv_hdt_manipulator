@@ -18,7 +18,7 @@
 
         <!-- constants -->
         <xacro:property name="M_PI" value="3.1415926535897931"/>
-        <xacro:property name="mass" value="0.107" />
+        <xacro:property name="mass" value="0.095" />
 
         <xacro:property name="drive_length" value="0.047"/>
         <xacro:property name="a35_length" value="0.03855"/>
@@ -70,14 +70,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H026994 - A35 M-2 PEDESTAL ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H026994 - A35 M-2 PEDESTAL ASSY - SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H026994 - A35 M-2 PEDESTAL ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H026994 - A35 M-2 PEDESTAL ASSY - SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -103,14 +103,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -136,14 +136,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="${M_PI} 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="${M_PI} 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -166,14 +166,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024847 - A35 M-2 PROXIMAL TUBE ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024847 - A35 M-2 PROXIMAL TUBE ASSY - SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024847 - A35 M-2 PROXIMAL TUBE ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024847 - A35 M-2 PROXIMAL TUBE ASSY - SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -196,14 +196,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 ${M_PI} 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="0 ${M_PI} 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -230,14 +230,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 ${M_PI/2} -${M_PI/2}"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="0 ${M_PI/2} -${M_PI/2}"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -263,14 +263,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="${M_PI} 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024848 - A35 M-2 DISTAL TUBE ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024848 - A35 M-2 DISTAL TUBE ASSY - SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="${M_PI} 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024848 - A35 M-2 DISTAL TUBE ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024848 - A35 M-2 DISTAL TUBE ASSY - SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -293,14 +293,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 ${M_PI}"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 ${M_PI}"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -326,14 +326,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 ${M_PI/2} ${M_PI}"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="0 ${M_PI/2} ${M_PI}"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024840 - A35 M-2 DRIVE MODULE, SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -359,14 +359,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 ${M_PI/2} -${M_PI/2}"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024842 - A35 M-2 PINCER ASSY - SHAREABLE, UNDERWATER.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024842 - A35 M-2 PINCER ASSY - SHAREABLE, UNDERWATER.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="0 ${M_PI/2} -${M_PI/2}"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H024842 - A35 M-2 PINCER ASSY - SHAREABLE, UNDERWATER.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H024842 - A35 M-2 PINCER ASSY - SHAREABLE, UNDERWATER.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -394,14 +394,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="${M_PI} 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="${M_PI} 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
@@ -432,14 +432,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="${M_PI} 0 0"/>
                 <geometry>
-                <mesh filename="package://hdt_angler_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
+                <mesh filename="package://hdt_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="${M_PI} 0 0"/>
                 <geometry>
-                    <mesh filename="package://hdt_angler_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
+                    <mesh filename="package://hdt_description/meshes/H022927 - A35 PINCER FINGER, LONG, OVERMOLD ASSY - SHAREABLE.STL"/>
                 </geometry>
                 <material name="black1"/>
             </visual>
